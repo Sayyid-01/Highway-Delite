@@ -62,7 +62,7 @@ const Checkout = () => {
   const handlePromoApply = async () => {
     if (!promoCode.trim()) return;  // Don't call if empty
     try {
-      const res = await axios.post("http://localhost:5000/api/promo/validate", { code: promoCode });
+      const res = await axios.post("https://highway-delite-backend-g070.onrender.com/api/promo/validate", { code: promoCode });
       setPromoValid(res.data);  
     } catch (err) {
       setPromoValid({ valid: false });
@@ -78,7 +78,7 @@ const Checkout = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/bookings", {
+      const res = await axios.post("https://highway-delite-backend-g070.onrender.com/api/bookings", {
         experienceId: experience._id,
         user,
         slot: selectedSlot,

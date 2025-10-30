@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';  // Changed to localhost for local testing
+const API_BASE = 'https://highway-delite-backend-g070.onrender.com/api'; 
 
 export const useApi = <T = any>(url: string, method: 'GET' | 'POST' = 'GET', body?: any) => {
   const [data, setData] = useState<T | null>(null);

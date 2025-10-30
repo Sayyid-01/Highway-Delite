@@ -22,7 +22,7 @@ const Home = ({ searchQuery }: HomeProps) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/experiences")
+      .get("https://highway-delite-backend-g070.onrender.com/api/experiences")
       .then((res) => setExperiences(res.data))
       .catch((err) => console.error("Error fetching experiences:", err))
       .finally(() => setLoading(false));
